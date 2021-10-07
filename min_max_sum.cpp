@@ -11,29 +11,29 @@
 #include <iostream>
 
 
-int main(int argc, const char * argv[]) {
+int main( int argc, const char * argv[] ) {
     
-    int array[5] = {396285104, 573261094, 759641832, 819230764, 364801279};  // integers: always 5
+    int array[ 5 ] = { 396285104, 573261094, 759641832, 819230764, 364801279 };  // integers: always 5
     
-    uint32_t max = 0;   // max sum
-    uint32_t min = 0;   // min sum
+    uint32_t max = 0;                             // max sum
+    uint32_t min = 0;                             // min sum
     
-    std::sort(array, array + 5);  // sort of array
+    std::sort( array, array + 5 );                // sort of array
     
     for( unsigned int i = 0; i < 4; i++ ) {
         
-        min += array[i];   // return of min
+        min += array[ i ];                        // return of min
         
     }
     
     for( unsigned int i = 4; i > 0; i-- ) {
         
-        max += array[i];  // return of max
+        max += array[ i ];                        // return of max
         
     }
     
-    for( unsigned int i = 0; i < 4; i++) {
-        std::cout << array[i] << " ";  // display of the array in the console
+    for( unsigned int i = 0; i < 4; i++ ) {
+        std::cout << array[ i ] << " ";           // display of the array in the console
     }
     
     std::cout << "\n\n*---------------------result---------------------*\n" << std::endl;
