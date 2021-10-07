@@ -50,9 +50,9 @@ std::vector<int> matchingStrings(std::vector<std::string> strings, std::vector<s
 
 int main() {
     
-    std::vector<std::string> strings { "tgerfwd", "cat", "dog", "dog", "tgfrde", "uihoj" }; // strings
+    std::vector<std::string> strings { "bear", "cat", "dog", "dog", "frog", "snake" };      // strings
 
-    std::vector<std::string> querties { "guvhb", "cat", "dog", "giuhoi", "hgjl" };          // querties
+    std::vector<std::string> querties { "cognac", "cat", "dog", "vodka", "beer" };          // querties
     
     
     std::vector<int> sums = matchingStrings(strings, querties);                             // function
