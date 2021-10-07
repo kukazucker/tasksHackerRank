@@ -23,12 +23,12 @@
 
 std::vector<int> matchingStrings(std::vector<std::string> strings, std::vector<std::string> queries) {
     
-    std::vector<int> sums;                                      // summa of every query
+    std::vector<int> sums;                                      // sum of every query
     sums.resize(queries.size());                                // resize of vector
 
     for( unsigned int i = 0; i < queries.size(); i++ ) {        // sort of queryes from queries[0]
         
-        int summa = 0;                                          // summa of every query, updated every cycle
+        int summa = 0;                                          // sum of every query, updated every cycle
 
         for( unsigned int j = 0; j < strings.size(); j++ ) {    // sort of strings
 
