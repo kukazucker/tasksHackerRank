@@ -26,7 +26,7 @@
 
 int lonelyinteger(std::vector<int> a) {                         // function
             
-    std::vector<int> numbers;                                   //create a array that contains all number from 0 to 100
+    std::vector<int> numbers;                                   // create a array that contains all number from 0 to 100
     
     numbers.resize(100);                                        // resize of numbers
     
