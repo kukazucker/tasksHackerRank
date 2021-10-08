@@ -61,9 +61,9 @@ int main() {
     
     std::vector< int > strings { 1, 2, 3, 4, 3, 2, 1 , 95, 4 };     // array
     
-    int result = lonelyinteger( strings );                        // function
+    int result = lonelyinteger( strings );                          // function
     
-    std::cout << result;                                          //result
+    std::cout << result;                                            //result
     
     
     return 0;
