@@ -16,12 +16,10 @@ THE COURTING SORT
 
 std::vector< int > countingSort( std::vector< int > arr ) {         // main function
 
-    std::sort( arr.begin(), arr.end() );                            // sort of a array
-            
-    unsigned int numMax = arr[ arr.size() - 1 ];                    // maximal number from array ( i need it for memory saving )
+    unsigned int numMax = 100;                                      // maximal number
             
     std::vector< int > numCount;                                    // the array the will be in answer
-    numCount.resize( 100 );                                         // size: 0 - 99 numbers
+    numCount.resize( numMax );                                      // size: 0 - 99 numbers
          
     unsigned int k = 0;                                             // the completion of array the numbers
     while( k < numMax + 1 ) {                                       // from 0 - maximal number from array
@@ -38,7 +36,7 @@ std::vector< int > countingSort( std::vector< int > arr ) {         // main func
             
         for( unsigned int j = 0; j < arr.size(); j++ ) {            // comparison
                     
-            if( numCount[ i ] == numQuantity[ j ] ) {
+            if( numCount[ i ] == arr[ j ] ) {
                        
                 numQuantity += 1;
                 
