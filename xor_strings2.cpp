@@ -17,7 +17,7 @@ std::string string_xor ( std::string s, std::string t ) {      // main function
     
     for( unsigned int i = 0; i < s.size(); i++ ) {             // xor with every integer from first and second strings
          
-         s[ i ] = ( s[ i ] ^ t[ i ] ) + '0';                   // return the answer in string s
+         s[ i ] = ( s[ i ] ^ t[ i ] ) + '0';                   // return the answer in string s and conversion from int to char
         
     }
     
@@ -31,7 +31,7 @@ int main() {
             
     std::string k = string_xor( string1, string2 );            // function call
     
-    std::cout << k;                                            //display a answer
+    std::cout << k;                                            // display a answer
     
     return 0;
 }
