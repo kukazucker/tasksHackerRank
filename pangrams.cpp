@@ -55,10 +55,10 @@ int main() {
     
 
     std::string answer = pangrams(string1);
-    std::cout << answer << std::endl;                                                       // display answer to fisrt string
+    std::cout << answer << std::endl;                            // display answer to fisrt string
     
     std::string answer1 = pangrams(string2);
-    std::cout << answer1;                                                                   // display answer to second string
+    std::cout << answer1;                                        // display answer to second string
     
     return 0;
 }
