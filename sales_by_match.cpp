@@ -13,14 +13,15 @@
 #include <string>
 #include <vector>
 
-int sockMerchant(int n, std::vector< int > ar) {                        // main function
+int sockMerchant( int n, std::vector< int > ar ) {                      // main function
     
     int pairs = 0;                                                      // how many there are pairs of sucks
     
     std::sort( ar.begin(), ar.end() );                                  // sort array for my algorithm
-    
-    for( unsigned int i = 0; i < ar.size(); i ) {                       // move trhough the array
-                                                                        // *there i hasn't '++' becouse i need myself increase or reduce index*
+ 
+    unsigned int i = 0;
+    while( i < ar.size() ) {                                             // move trhough the array
+                                                                        
         if( ar[ i ] == ar[ i + 1 ] ) {                                  // if numbers are equal
             
             pairs += 1;                                                 // then pair + 1
@@ -30,11 +31,9 @@ int sockMerchant(int n, std::vector< int > ar) {                        // main 
         } else {
             
             i += 1;                                                     // or there are no more pairs and i move to one cells
-        }
-        
+        }  
     }
-
-    
+ 
     return pairs;                                                       // return a answer
 }
 
