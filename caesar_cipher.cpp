@@ -13,46 +13,46 @@
 #include <iostream>
 #include <string>
 
-std::string caesarCipher(std::string s, int k) {                // main function
+std::string caesarCipher( std::string s, int k ) {                // main function
     
-    while( k > 26) {                                            // when k is big e. g. 87 or 147 we need reduce extra part without
-                                                                // moving of letters e. g. from 62 we need to know just number 9
-    k -= 26;                                                    // full english alphabet
+    while( k > 26 ) {                                             // when k is big e. g. 87 or 147 we need reduce extra part without
+                                                                  // moving of letters e. g. from 62 we need to know just number 9
+    k -= 26;                                                      // full english alphabet
             
     }
     
     
-    for( unsigned int i = 0; i < s.size(); i++ ) {              // comparison and modification
+    for( unsigned int i = 0; i < s.size(); i++ ) {                // comparison and modification
 
-    int f = static_cast<int>(s[i]);                             // number of letter in ASCII
+    int f = static_cast< int >( s[ i ]);                          // number of letter in ASCII
 
-        if( (f < 64) || ( f > 90 && f < 97 ) || ( f > 122) ){   // if we found something except letters ('.', '!' ...)
+        if( (f < 64) || ( f > 90 && f < 97 ) || ( f > 122 ) ) {   // if we found something except letters ('.', '!' ...)
 
-            continue;                                           // then skip this symbol
+            continue;                                             // then skip this symbol
 
         }
 
 
-    f+= k;                                                      // in ASCII we add to number of letter shift length
+    f+= k;                                                        // in ASCII we add to number of letter shift length
 
-        if( ( isupper( s[ i ] ) && f > 90 ) ) {                 // if it is capital letter
+        if( ( isupper( s[ i ] ) && f > 90 ) ) {                   // if it is capital letter
 
-            int rest = f - 90;                                  // how much to shift
-            f = 64;                                             // start from 'A' in ASCII
-            f += rest;                                          // + shift
+            int rest = f - 90;                                    // how much to shift
+            f = 64;                                               // start from 'A' in ASCII
+            f += rest;                                            // + shift
 
-        } else if( islower( s[ i ] ) && f > 122 ) {             // if it is uppercase letter
+        } else if( islower( s[ i ] ) && f > 122 ) {               // if it is uppercase letter
 
-            int rest = f - 122;                                 // how much to shift
-            f = 96;                                             // start from 'a' in ASCII
-            f += rest;                                          // + shift
+            int rest = f - 122;                                   // how much to shift
+            f = 96;                                               // start from 'a' in ASCII
+            f += rest;                                            // + shift
 
         }
         
-        s[i] = f;                                               // transformation from ASCII to char in string
+        s[ i ] = f;                                               // transformation from ASCII to char in string
     }
     
-    return s;                                                   // return the string
+    return s;                                                     // return the string
 }
 
 
@@ -60,11 +60,11 @@ std::string caesarCipher(std::string s, int k) {                // main function
  
 int main() {
 
-    std::string words("!m-rB`-oN!.W`cLAcVbN/CqSoolII!SImji.!w/`Xu`uZa1TWPRq`uRBtok"
-                      "`xPT`lL-zPTc.BSRIhu..-!.!tcl!-U");       // input data
+    std::string words( "!m-rB`-oN!.W`cLAcVbN/CqSoolII!SImji.!w/`Xu`uZa1TWPRq`uRBtok"
+                       "`xPT`lL-zPTc.BSRIhu..-!.!tcl!-U" );       // input data
     
     
-    std::cout << caesarCipher(words, 62);                       // function call;
+    std::cout << caesarCipher( words, 62 );                       // function call;
 
     return 0;
 }
