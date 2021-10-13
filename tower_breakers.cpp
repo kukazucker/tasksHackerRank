@@ -12,6 +12,11 @@
  5) If the current player is unable to make a move, they lose the game.
  
  Given the values of n and m, determine which player will win. If the first player wins, return 1. Otherwise, return 2.
+ 
+ =====================================================================================================================================
+ 
+ My solution: the height of towers didn't needed because we need to know who is last one to leave a unit. Every step of every player
+ is decreasing arithmetic progression so if the quantity is odd then second player wins, otherwise first.
 
  =====================================================================================================================================
  */
@@ -20,15 +25,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
-/*
-=====================================================================================================================================
-
- My solution: the height of towers didn't needed because we need to know who is last one to leave a unit. Every step of every player
- is decreasing arithmetic progression so if the quantity is odd then second player wins, otherwise first.
- 
-=====================================================================================================================================
-*/
 
 int towerBreakers(int n, int m) {                       // main function
     
