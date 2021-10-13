@@ -26,9 +26,9 @@
 #include <string>
 #include <vector>
 
-int towerBreakers(int n, int m) {                       // main function
+int towerBreakers( int n, int m ) {                     // main function
     
-    int winPlayer = ( m == 1 || n % 2 == 0) ? 2 : 1;    // if number of towers is even or equal to 1 then second player wins
+    int winPlayer = ( m == 1 || n % 2 == 0 ) ? 2 : 1;   // if number of towers is even or equal to 1 then second player wins
                                                         // otherwise first player wins
     return winPlayer;                                   // return a answer
 
@@ -41,7 +41,7 @@ int main() {
     
     int height = 5;                                     // height of towers
         
-    std::cout << towerBreakers(towers, height);         // function call
+    std::cout << towerBreakers( towers, height );       // function call
 
     return 0;
     
